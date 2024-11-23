@@ -1,0 +1,393 @@
+html {
+  scroll-snap-type: y mandatory; /* Enable vertical snap scrolling */
+}
+
+.section {
+  scroll-snap-align: start; /* Align each section to the start */
+}
+
+/* General Styles */
+.portfolio {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 20px; /* Increased padding around the whole portfolio */
+  margin: 0 20px;
+  
+}
+
+
+/* Header Section */
+.text-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.text-effect {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  background: linear-gradient(90deg, #007acc, #ff6347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px; /* Increased bottom margin */
+  position: relative;
+  display: inline-block;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  width: 100%;
+  padding: 15px 0; /* Added padding around the text effect */
+}
+
+.highlight {
+  color: #ff6347;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-container{
+  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 70%;
+  margin: 0 auto;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+
+/* About Me Section */
+.about-me-section {
+  margin-top: 60px;
+}
+
+.about-me {
+  text-align: justify;
+  width: 40%;
+  margin: 30px auto; /* Increased margin for more space around the section */
+
+  border-radius: 10px;
+  padding: 40px; /* Increased padding for a more spacious feel */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px; /* Increased margin to give more space between sections */
+  text-transform: uppercase;
+  color: #333;
+  border-bottom: 3px solid #007acc;
+  display: inline-block;
+  padding-bottom: 10px; /* Adjusted padding to balance spacing */
+  letter-spacing: 1px;
+  animation: underlineGlow 2s ease-in-out infinite alternate;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px; /* Added margin at the bottom for spacing */
+}
+
+.about-text:hover {
+  color: #007acc;
+  transform: scale(1.05);
+}
+.project-container {
+  padding: 20px;
+  text-align: center;
+}
+/* Projects Section */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px; /* Increased padding around the projects section */
+  margin-top: 40px; /* Added top margin for spacing from the previous section */
+  transition: all 0.3s ease;
+}
+
+.project-cards:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease-in-out;
+  margin: 15px; /* Added margin between project cards */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #007acc;
+  font-size: 1.4rem;
+  margin-bottom: 15px; /* Increased margin for space between title and description */
+  position: relative;
+  display: inline-block;
+  animation: underlineGlow 2s ease-in-out infinite alternate;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px; /* Added margin to separate paragraphs */
+}
+.skills-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+/* Skills Section */
+.skills-section {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  width: 50%;
+  margin: 40px auto; /* Increased margin for spacing from other sections */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.skills-list:hover {
+  transform: scale(1.05);
+}
+
+.skill-label {
+  font-weight: bold;
+  color: #007acc;
+  margin-right: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.skill-label:hover {
+  color: #ff6347;
+}
+.experiences-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  animation: fadeInUp 2s ease-in-out;
+}
+/* Experience Section */
+.experience-section {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #444;
+  width: 60%;
+  margin: 30px auto; /* Added margin to create space */
+  transition: all 0.3s ease-in-out;
+}
+
+.experience-text:hover {
+  color: #007acc;
+  transform: scale(1.05);
+}
+
+/* Extras Section */
+.extras-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+.extras-section {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+  margin-top: 30px; /* Added top margin for spacing */
+}
+
+.extras-list li {
+  margin: 15px 0; /* Increased spacing between items */
+}
+
+.extras-list strong {
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.extras-list strong:hover {
+  color: #ff6347;
+}
+
+/* Contact Section */
+.contact-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px; /* Added bottom margin */
+  color: #444;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-list li {
+  margin: 12px 0; /* Added margin for spacing between contact items */
+}
+
+.contact-list a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #ff6347;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-container,
+  .about-me,
+  .experience-text {
+    width: 90%;
+  }
+
+  .skills-list {
+    width: 80%;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-effect {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text,
+  .experience-text {
+    font-size: 1rem;
+  }
+
+  .skills-list {
+    font-size: 1rem;
+  }
+
+  .contact-text,
+  .contact-list {
+    font-size: 0.9rem;
+  }
+
+  .lorem-text {
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347;
+  }
+  100% {
+    text-shadow: 0 0 5px #007acc, 0 0 10px #007acc, 0 0 15px #007acc;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineGlow {
+  0% {
+    border-bottom-color: #007acc;
+  }
+  100% {
+    border-bottom-color: #ff6347;
+  }
+}
+.section {
+  width:100vw;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #007acc;
+}
+
+.section p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.section:last-child {
+  border-bottom: none; /* Remove border for the last section */
+}

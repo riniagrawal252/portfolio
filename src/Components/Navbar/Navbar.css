@@ -1,0 +1,140 @@
+/* Lottie container positioning */
+.lottie {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.lottie:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Circle container */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* Circle text styling */
+.circle-text {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+}
+
+.circle-text span {
+  transform: rotate(-90deg);
+  font-weight: bold;
+  color: #0b0c0e;
+  letter-spacing: 1px;
+}
+
+/* Dropdown toggle */
+.dropdown-toggle {
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #007acc;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  transform: scale(1.1);
+  color: #005f8c;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  
+
+  padding: 10px;
+  z-index: 10;
+  width: 180px;
+  visibility: hidden; /* Prevent layout shifts */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Show dropdown content */
+.dropdown-content.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
+}
+
+/* Dropdown options */
+.dropdown-content p {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  border-radius: 4px;
+
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lottie {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-text {
+    width: 150px;
+    height: 150px;
+    font-size: 1rem;
+  }
+
+  .dropdown-content {
+    width: 140px;
+  }
+
+  .dropdown-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lottie {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circle-text {
+    width: 130px;
+    height: 130px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-content {
+    width: 120px;
+  }
+
+  .dropdown-content p {
+    font-size: 0.75rem;
+  }
+}
