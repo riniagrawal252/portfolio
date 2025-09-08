@@ -20,9 +20,10 @@ const Portfolio = () => {
               Hey! It's <span className="highlight">Rini</span>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis.
             </h1>
           </div>
-        <AnimatedText/>
+       
       </div>
       </section>
+         <AnimatedText/>
       </div>
       
       {/* About Me Section */}
@@ -36,8 +37,9 @@ const Portfolio = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra nisi at semper malesuada. Proin vehicula libero non purus fringilla, id vulputate purus luctus. Nam nec justo nisi. Suspendisse potenti.
             </p>
           </div>
-          <AnimatedText/>
+          
         </section>
+        <AnimatedText/>
       </div>
       </div>
 
@@ -77,18 +79,19 @@ const Portfolio = () => {
             <h2 className="section-title">Skills</h2>
             <ul className="skills-list">
               <li>
-                <span className="skill-label">Programming:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span className="skill-label">Programming:</span> Javascript, Java, HTML, CSS
               </li>
               <li>
-                <span className="skill-label">Frameworks:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span className="skill-label">Frameworks:</span> Tailwind CSS, React Js, Spring boot
               </li>
               <li>
-                <span className="skill-label">Databases:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span className="skill-label">Databases:</span> Sql
               </li>
             </ul>
           </div>
-          <AnimatedText/>
+          
         </section>
+        <AnimatedText/>
       </div>
       </div>
 
@@ -100,11 +103,12 @@ const Portfolio = () => {
           <div className="experiences-container">
             <h2 className="section-title">Experience</h2>
             <p className="experience-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices lectus non justo vehicula, in aliquam eros posuere. Etiam sed ligula eu mi vestibulum dapibus.
+             Internship At Scope Global Skills University.
             </p>
           </div>
-          <AnimatedText/>
+         
         </section>
+         <AnimatedText/>
       </div>
 </div>
       {/* Extras Section */}
@@ -115,18 +119,18 @@ const Portfolio = () => {
           <div className="extras-container">
             <h2 className="section-title">Extras</h2>
             <ul className="extras-list">
-              <li><strong>Certifications:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li><strong>Open Source Contributions:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li><strong>Hobbies:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li><strong>Certifications:</strong> Java Full Stack Development at Cybrom Technology</li>
+              <li><strong>Open Source Contributions:</strong> Played Cricket and earn Rs 5000 At cybrom technology</li>
+              <li><strong>Hobbies:</strong> Reading books, making blogs, making posters using canvas</li>
             </ul>
           </div>
-          <AnimatedText/>
+          
         </section>
-        
+         <AnimatedText/>
       </div>
       
       </div>
-      <AnimatedText/>
+      
     
       
 
@@ -143,22 +147,23 @@ const Portfolio = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
             </p>
             <ul className="contact-list">
-              <li>Email: lorem@example.com</li>
+              <li>Email: riniagrawal678@gmail.com</li>
               <li>
                 LinkedIn:{" "}
-                <a href="https://linkedin.com/in/placeholder" target="_blank" rel="noopener noreferrer">
+                <a href="www.linkedin.com/in/rini-agrawal-076619287" target="_blank" rel="noopener noreferrer">
                   Placeholder LinkedIn Profile
                 </a>
               </li>
               <li>
                 GitHub:{" "}
-                <a href="https://github.com/placeholder" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/riniagrawal252/" target="_blank" rel="noopener noreferrer">
                   Placeholder GitHub Profile
                 </a>
               </li>
             </ul>
           </div>
         </section>
+         <AnimatedText/>
       </div>
       </div>
       </div>
