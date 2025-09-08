@@ -19,7 +19,7 @@ const App = () => {
     <Animatedtext/>
     
     <Mainnavbar/>
-    <Animatedtext/>
+    
     </div>
     </div>
     
