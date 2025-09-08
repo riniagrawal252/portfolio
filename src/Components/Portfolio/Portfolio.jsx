@@ -20,7 +20,7 @@ const Portfolio = () => {
               Hey! It's <span className="highlight">Rini</span>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis.
             </h1>
           </div>
-        
+        <AnimatedText/>
       </div>
       </section>
       </div>
@@ -36,6 +36,7 @@ const Portfolio = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra nisi at semper malesuada. Proin vehicula libero non purus fringilla, id vulputate purus luctus. Nam nec justo nisi. Suspendisse potenti.
             </p>
           </div>
+          <AnimatedText/>
         </section>
       </div>
       </div>
@@ -62,6 +63,7 @@ const Portfolio = () => {
               />
             </div>
           </div>
+          <AnimatedText/>
         </section>
       </div>
       </div>
@@ -85,6 +87,7 @@ const Portfolio = () => {
               </li>
             </ul>
           </div>
+          <AnimatedText/>
         </section>
       </div>
       </div>
@@ -100,6 +103,7 @@ const Portfolio = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices lectus non justo vehicula, in aliquam eros posuere. Etiam sed ligula eu mi vestibulum dapibus.
             </p>
           </div>
+          <AnimatedText/>
         </section>
       </div>
 </div>
@@ -116,6 +120,7 @@ const Portfolio = () => {
               <li><strong>Hobbies:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             </ul>
           </div>
+          <AnimatedText/>
         </section>
         
       </div>
