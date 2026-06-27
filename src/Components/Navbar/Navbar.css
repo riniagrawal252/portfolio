@@ -1,65 +1,95 @@
-/* Lottie container positioning */
+/* ========================
+   Navbar Container
+=========================== */
+.navbar {
+  position: absolute;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;/* Add background if needed */
+  z-index: 1000;
+    
+
+}
+
+/* ========================
+   Lottie Container
+=========================== */
 .lottie {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  z-index: 2;
-  top: 20px;
-  left: 20px;
-  transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.lottie:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Circle container */
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
   position: relative;
-}
-
-/* Circle text styling */
-.circle-text {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size: 12px;
+}
+
+/* ========================
+   Circle Container
+=========================== */
+
+/* ========================
+   Circle Text Styling
+=========================== */
+
+.circle-text-layer {
+
   text-align: center;
-  color: #333;
+  color: #0c0547;
+  padding: 100px;
+   transform: rotate(-90deg) ;
+    font-weight: bold;
+    font:1.5em sans-serif;
+   
+  
+ 
 }
-
-.circle-text span {
-  transform: rotate(-90deg);
+.circle-text-layer:hover{
+  color: #440620;
   font-weight: bold;
-  color: #0b0c0e;
-  letter-spacing: 1px;
+
+  transform: rotateX(60deg);
+}
+.circle-text-layer2 {
+   text-align: center;
+   padding:100px;
+ color: #0c0547;
+   transform: rotate(-90deg) ;
+    font-weight: bold;
+    font :1.5em sans-serif;
+}
+.circle-text-layer2:hover{
+  color:  #440620;
+  font-weight: bold;
+  transform: rotateX(60deg);
 }
 
-/* Dropdown toggle */
+
+
+/* ========================
+   Dropdown Toggle Button
+=========================== */
 .dropdown-toggle {
-  margin-left: 10px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #007acc;
   font-size: 1.2rem;
+  color: #181302;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-toggle:hover {
   transform: scale(1.1);
-  color: #005f8c;
+  color: #130f01;
 }
 
-/* Dropdown content */
+/* =========================
+   Dropdown Content Styling
+============================ */
 .dropdown-content {
   position: absolute;
   top: 60px;
@@ -76,65 +106,74 @@
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
-/* Show dropdown content */
 .dropdown-content.open {
   visibility: visible;
   opacity: 1;
-  transform: translateX(-50%) translateY(5px);
+  transform: translateX(50%) translateY(5px);
 }
 
-/* Dropdown options */
-.dropdown-content p {
-  margin: 0;
-  padding: 10px 12px;
+/* =========================
+   Dropdown Options (Buttons)
+============================ */
+.dropdown-content button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 12px;
   font-size: 1rem;
+  color: #3d2121;
+  text-align: left;
   cursor: pointer;
-  color: #333;
   border-radius: 4px;
-
+  transition: background-color 0.2s ease;
 }
 
+.dropdown-content button:hover {
+  background-color: #ee0f0f;
+}
 
-
-/* Responsive adjustments */
+/* =========================
+   Responsive Design
+============================ */
 @media (max-width: 768px) {
   .lottie {
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
   }
 
-  .circle-text {
-    width: 150px;
-    height: 150px;
+  .circle-text-layer {
+    font-size: 1rem;
+  }
+  .circle-text-layer2 {
     font-size: 1rem;
   }
 
   .dropdown-content {
-    width: 140px;
+    min-width: 140px;
   }
 
-  .dropdown-content p {
+  .dropdown-content button {
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .lottie {
-    width: 130px;
-    height: 130px;
+    max-width: 130px;
   }
 
-  .circle-text {
-    width: 130px;
-    height: 130px;
+  .circle-text-layer {
+    font-size: 0.9rem;
+  }
+  .circle-text-layer2 {
     font-size: 0.9rem;
   }
 
   .dropdown-content {
-    width: 120px;
+    min-width: 120px;
   }
 
-  .dropdown-content p {
+  .dropdown-content button {
     font-size: 0.75rem;
   }
 }

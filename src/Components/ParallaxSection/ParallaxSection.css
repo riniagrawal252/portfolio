@@ -1,6 +1,8 @@
-/* Navbar Container */
-.navbar {
-  position: fixed;
+/* ====================
+   Navbar Container
+==================== */
+.navbar2 {
+  position:fixed;
   right: 0;
   top: 0;
   bottom: 0;
@@ -16,82 +18,152 @@
   transition: all 0.3s ease;
 }
 
-/* Section Wrapper */
+/* ====================
+   Section Wrapper
+==================== */
 .nav-section {
-  position: relative;
+  
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
-  
 }
 
-/* Navbar Items (Links) */
+/* ====================
+   Navbar Items (Links)
+==================== */
 .nav-item,
 .nav-link {
   font-size: 16px;
   margin-bottom: 10px;
-
-  
   text-align: right;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(10px); /* Initially off-screen */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Animation for fade and slide */
+  opacity: 0;                  /* Hidden initially */
+  transform: translateX(10px); /* Slightly off-screen initially */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* When navbar container is hovered, make the IDs (labels) appear */
-.navbar:hover .nav-link {
-  opacity: 1; /* Fade in */
-  transform: translateX(0); /* Slide into position */
+/* Show nav-links on navbar hover */
+.navbar2:hover .nav-link {
+  opacity: 1;                  /* Fade in */
+  transform: translateX(0);    /* Slide into place */
   font-weight: bold;
-  color: #141116; /* Change color on hover */
+  color: #1e9c6c;
 }
 
-/* Circle Indicators */
+/* ====================
+   Circle Indicators
+==================== */
 .nav-circle {
-  width: 8px;
-  height: 8px;
+  width: 0;
+  height:0;
   background-color: #3e2723;
   border-radius: 50%;
   margin-right: 10px;
-  flex-shrink: 0;
+
   transition: all 0.3s ease;
+  z-index: 10;
+
+  /* Increase clickable hover area without visual change */
+  padding: 10px;       /* Invisible padding expands hover target */
+  box-sizing: content-box;
 }
 
-/* Active Circle */
+/* Active Circle Styling */
 .nav-circle.highlighted {
   width: 16px;
   height: 16px;
-  border: 2px solid #3e2723;
+  border: 1px solid #3e2723;
   background-color: transparent;
-  transform: scale(1.2); /* Slightly enlarge the circle */
+  transform: scale(1.2); /* Slightly enlarge */
 }
 
-/* Smooth scrolling for modern browsers */
-html {
-  scroll-behavior: smooth;
+
+
+/* ====================
+   Responsive Adjustments
+==================== */
+
+/* Large tablets / smaller desktops */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 150px;
+    padding: 15px;
+    gap: 25px;
+  }
+  .nav-link {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .nav-circle {
+    width: 7px;
+    height: 7px;
+  }
+  .nav-circle.highlighted {
+    width: 14px;
+    height: 14px;
+  }
 }
 
-/* Responsive Design */
+/* Tablets and large phones */
 @media (max-width: 768px) {
   .navbar {
-    width: 80px;
-    padding: 10px;
+    width: 100px;
+    padding: 12px;
+    gap: 20px;
   }
-
   .nav-link {
-    font-size: 12px;
-    margin-left: 15px;
+    font-size: 13px;
+    margin-left: 8px;
   }
-
   .nav-circle {
     width: 6px;
     height: 6px;
   }
-
   .nav-circle.highlighted {
     width: 12px;
     height: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navbar {
+    width: 70px;
+    padding: 8px;
+    gap: 15px;
+  }
+  .nav-link {
+    font-size: 11px;
+    margin-left: 5px;
+  }
+  .nav-circle {
+    width: 5px;
+    height: 5px;
+  }
+  .nav-circle.highlighted {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small devices or narrow screens */
+@media (max-width: 360px) {
+  .navbar {
+    width: 60px;
+    padding: 6px;
+    gap: 12px;
+  }
+  .nav-link {
+    font-size: 10px;
+    margin-left: 4px;
+  }
+  .nav-circle {
+    width: 4px;
+    height: 4px;
+  }
+  .nav-circle.highlighted {
+    width: 8px;
+    height: 8px;
   }
 }

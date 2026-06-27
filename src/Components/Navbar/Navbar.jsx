@@ -8,12 +8,10 @@ const Navbar = () => {
   const parallaxRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Dropdown Toggle
-  const toggleDropdown = () => {
-    setIsOpen((prevState) => !prevState);
-  };
+  // Toggle dropdown open/close
+  const toggleDropdown = () => setIsOpen((prev) => !prev);
 
-  // Close dropdown on click outside
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -24,12 +22,20 @@ const Navbar = () => {
         setIsOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Parallax Scroll Effect
+  // Close dropdown on Esc
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  // Parallax scroll effect
   useEffect(() => {
     const parallax = parallaxRef.current;
     if (!parallax) return;
@@ -42,40 +48,70 @@ const Navbar = () => {
         layer.style.transform = `translateY(${scrollY / speed}px)`;
       });
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav ref={parallaxRef}>
-      <div className="lottie">
+    
+    <nav
+      ref={parallaxRef}
+      className="navbar"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
+      <div className="lottie layer">
         <LottieAnimation />
-        <br />
-        <br />
-        <br />
-        <div className="circle">
+        <div className="spacer" aria-hidden="true" />
+
+        {/* Circle with Dropdown */}
+        <div className="circle" role="region" aria-label="Language selection">
           <span>En</span>
-          <div onClick={toggleDropdown} className="dropdown-toggle">
+          <button
+            onClick={toggleDropdown}
+            className="dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded={isOpen}
+            aria-controls="language-dropdown"
+            type="button"
+          >
             <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} />
-          </div>
+          </button>
 
           {/* Dropdown Content */}
-          <div className={`dropdown-content ${isOpen ? "open" : ""}`}>
-            <p>Option 1</p>
-            <p>Option 2</p>
-            <p>Option 3</p>
+          <div
+            id="language-dropdown"
+            className={`dropdown-content ${isOpen ? "open" : ""}`}
+            role="menu"
+            aria-hidden={!isOpen}
+          >
+            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
+              Blog 1
+            </button>
+            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
+              Blog 2
+            </button>
+            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
+              Blog 3
+            </button>
           </div>
         </div>
+         
 
-        <div className="circle-text">
-          <span>Serial Entrepreneur</span>
+        {/* Rotated Labels */}
+      
+        <div className="circle-text-layer">
+          My Portfolio is Here!!!
         </div>
-        <div className="circle-text">
-          <span>Rini Agrawal</span>
+    
+        <div className="circle-text-layer2">
+      Rini Agrawal
         </div>
+        
       </div>
+     
     </nav>
+    
   );
 };
 

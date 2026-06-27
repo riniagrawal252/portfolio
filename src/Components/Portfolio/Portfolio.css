@@ -1,302 +1,261 @@
+/* ===================
+   CSS Variables
+=================== */
+:root {
+  --primary-color: #007acc;
+  --secondary-color: #ff6347;
+  --text-color-primary: #333;
+  --text-color-secondary: #555;
+  --background-light: #fff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --font-family-serif: 'Georgia', serif;
+  --font-family-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* ===================
+   Global Settings
+=================== */
 html {
-  scroll-snap-type: y mandatory; /* Enable vertical snap scrolling */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-family: var(--font-family-sans);
 }
 
+body, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================
+   Section Layout
+=================== */
 .section {
-  scroll-snap-align: start; /* Align each section to the start */
-}
-
-/* General Styles */
-.portfolio {
-  display: grid;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  padding: 40px 20px; /* Increased padding around the whole portfolio */
-  margin: 0 20px;
-  
+  min-height: 100vh; /* Full viewport height */
+  scroll-snap-align: start;
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
+  background: var(--background-light);
 }
 
+/* Portfolio Wrapper */
+.portfolio {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+}
 
-/* Header Section */
-.text-container {
-  width: 80%;
-  margin: 0 auto;
+/* ===================
+   Section Titles
+=================== */
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--primary-color);
+  margin-bottom: 2rem;
+  animation: underlineGlow 2s ease-in-out infinite alternate;
   text-align: center;
-  padding: 20px;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* ===================
+   Hero Text
+=================== */
+.text-container {
+  text-align: center;
+  padding: 2rem 0;
+}
 
 .text-effect {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.5;
-  text-align: center;
-  background: linear-gradient(90deg, #007acc, #ff6347);
+  background: linear-gradient(90deg, #0b283b, #dd7f6f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 30px; /* Increased bottom margin */
-  position: relative;
-  display: inline-block;
+  margin-bottom: 1.5rem;
   animation: glow 1.5s ease-in-out infinite alternate;
-  width: 100%;
-  padding: 15px 0; /* Added padding around the text effect */
 }
 
 .highlight {
-  color: #ff6347;
+  color: var(--secondary-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.about-container{
-  
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 70%;
-  margin: 0 auto;
-  animation: fadeInUp 2s ease-in-out;
-}
-
-
-/* About Me Section */
-.about-me-section {
-  margin-top: 60px;
-}
-
-.about-me {
+/* ===================
+   About Section
+=================== */
+.about-container {
+  max-width: 800px;
   text-align: justify;
-  width: 40%;
-  margin: 30px auto; /* Increased margin for more space around the section */
-
-  border-radius: 10px;
-  padding: 40px; /* Increased padding for a more spacious feel */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1.5s ease-in-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 30px; /* Increased margin to give more space between sections */
-  text-transform: uppercase;
-  color: #333;
-  border-bottom: 3px solid #007acc;
-  display: inline-block;
-  padding-bottom: 10px; /* Adjusted padding to balance spacing */
-  letter-spacing: 1px;
-  animation: underlineGlow 2s ease-in-out infinite alternate;
-}
-
-.about-text {
-  font-size: 1.2rem;
   line-height: 1.8;
-  color: #555;
-  font-family: 'Georgia', serif;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 20px; /* Added margin at the bottom for spacing */
+  color: var(--text-color-secondary);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.about-text:hover {
-  color: #007acc;
-  transform: scale(1.05);
+.about-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px var(--shadow-medium);
 }
-.project-container {
-  padding: 20px;
-  text-align: center;
-}
-/* Projects Section */
+
+/* ===================
+   Projects Section
+=================== */
 .project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   justify-content: center;
-  padding: 40px 20px; /* Increased padding around the projects section */
-  margin-top: 40px; /* Added top margin for spacing from the previous section */
-  transition: all 0.3s ease;
-}
-
-.project-cards:hover {
-  transform: scale(1.05);
+  gap: 1.5rem;
+  padding: 2rem 0;
 }
 
 .project-card {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  width: 280px;
+  background: var(--background-light);
+  border: 1px solid #ddd;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  padding: 1rem;
   text-align: left;
-  background: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 1.5s ease-in-out;
-  margin: 15px; /* Added margin between project cards */
+  cursor: pointer;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px var(--shadow-medium);
 }
 
 .project-card h3 {
-  color: #007acc;
-  font-size: 1.4rem;
-  margin-bottom: 15px; /* Increased margin for space between title and description */
-  position: relative;
-  display: inline-block;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   animation: underlineGlow 2s ease-in-out infinite alternate;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #555;
-  margin-bottom: 10px; /* Added margin to separate paragraphs */
-}
-.skills-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-}
-/* Skills Section */
-.skills-section {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  width: 50%;
-  margin: 40px auto; /* Increased margin for spacing from other sections */
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  color: var(--text-color-secondary);
+  margin-bottom: 0.5rem;
 }
 
-.skills-list:hover {
-  transform: scale(1.05);
+/* ===================
+   Skills Section
+=================== */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.skills-list li {
+  margin: 0.75rem 0;
 }
 
 .skill-label {
   font-weight: bold;
-  color: #007acc;
-  margin-right: 10px;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed);
 }
 
 .skill-label:hover {
-  color: #ff6347;
-}
-.experiences-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-  animation: fadeInUp 2s ease-in-out;
-}
-/* Experience Section */
-.experience-section {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: justify;
-  color: #444;
-  width: 60%;
-  margin: 30px auto; /* Added margin to create space */
-  transition: all 0.3s ease-in-out;
+  color: var(--secondary-color);
 }
 
-.experience-text:hover {
-  color: #007acc;
-  transform: scale(1.05);
-}
-
-/* Extras Section */
-.extras-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-}
-.extras-section {
+/* ===================
+   Extras Section
+=================== */
+.extras-list {
   list-style: none;
   padding: 0;
-  font-size: 1.1rem;
   text-align: center;
-  color: #555;
-  margin-top: 30px; /* Added top margin for spacing */
 }
 
 .extras-list li {
-  margin: 15px 0; /* Increased spacing between items */
+  margin: 1rem 0;
 }
 
 .extras-list strong {
-  color: #007acc;
+  color: var(--primary-color);
   font-weight: bold;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed);
 }
 
 .extras-list strong:hover {
-  color: #ff6347;
+  color: var(--secondary-color);
 }
 
-/* Contact Section */
-.contact-container {
-  width: 70%;
-  margin: 0 auto;
-  text-align: left;
-}
+/* ===================
+   Contact Section
+=================== */
 .contact-text {
   font-size: 1.2rem;
-  margin-bottom: 20px; /* Added bottom margin */
-  color: #444;
+  margin-bottom: 1.25rem;
+  color: var(--text-color-primary);
 }
 
 .contact-list {
   list-style: none;
   padding: 0;
   font-size: 1.1rem;
-  color: #555;
 }
 
 .contact-list li {
-  margin: 12px 0; /* Added margin for spacing between contact items */
+  margin: 0.75rem 0;
 }
 
 .contact-list a {
-  color: #007acc;
-  text-decoration: none;
+  color: var(--primary-color);
   font-weight: bold;
-  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  transition: color var(--transition-speed), transform var(--transition-speed);
 }
 
 .contact-list a:hover {
-  color: #ff6347;
+  color: var(--secondary-color);
   transform: translateY(-2px);
+  text-decoration: underline;
 }
 
-/* Responsive Design */
+/* ===================
+   Animations
+=================== */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--secondary-color), 0 0 10px var(--secondary-color), 0 0 15px var(--secondary-color);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color), 0 0 15px var(--primary-color);
+  }
+}
+
+@keyframes underlineGlow {
+  0% {
+    border-bottom-color: var(--primary-color);
+  }
+  100% {
+    border-bottom-color: var(--secondary-color);
+  }
+}
+
+/* ===================
+   Responsive
+=================== */
 @media (max-width: 768px) {
-  .text-container,
-  .about-me,
-  .experience-text {
-    width: 90%;
-  }
-
-  .skills-list {
-    width: 80%;
-  }
-
-  .project-card {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
   .text-effect {
     font-size: 2rem;
   }
@@ -305,89 +264,29 @@ html {
     font-size: 1.6rem;
   }
 
-  .about-text,
-  .experience-text {
-    font-size: 1rem;
+  .project-card {
+    width: 90%;
   }
 
   .skills-list {
     font-size: 1rem;
   }
 
-  .contact-text,
-  .contact-list {
-    font-size: 0.9rem;
-  }
-
-  .lorem-text {
+  .contact-text, .contact-list {
     font-size: 1rem;
   }
 }
 
-/* Animations */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347;
+@media (max-width: 480px) {
+  .text-effect {
+    font-size: 1.8rem;
   }
-  100% {
-    text-shadow: 0 0 5px #007acc, 0 0 10px #007acc, 0 0 15px #007acc;
+
+  .section-title {
+    font-size: 1.4rem;
   }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+  .contact-text, .contact-list {
+    font-size: 0.9rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes underlineGlow {
-  0% {
-    border-bottom-color: #007acc;
-  }
-  100% {
-    border-bottom-color: #ff6347;
-  }
-}
-.section {
-  width:100vw;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-}
-
-
-
-.section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #007acc;
-}
-
-.section p {
-  font-size: 1.2rem;
-  color: #444;
-}
-
-.section:last-child {
-  border-bottom: none; /* Remove border for the last section */
 }
