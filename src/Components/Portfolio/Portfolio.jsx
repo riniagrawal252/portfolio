@@ -1,322 +1,237 @@
 import React from "react";
 import "./Portfolio.css";
 import ProjectCard from "../Dynamic/Projectcard";
-import Spotify_Clone from "../assets/Spotify-Clone.png";
-import Ecommerce from "../assets/Ecommerce.png";
 import AnimatedText from "../Animated/Animated";
+
+import SpotifyClone from "../assets/Spotify-Clone.png";
+import Ecommerce from "../assets/Ecommerce.png";
 
 const projects = [
   {
     title: "Spotify Clone",
     description:
-      "HTML, CSS, and JavaScript project that replicates Spotify's web interface, allowing users to browse and play music.",
+      "A responsive Spotify clone built using HTML, CSS and JavaScript. Users can browse playlists and control music playback through an interactive interface.",
+    image: SpotifyClone,
     link: "https://github.com/riniagrawal252/spotify-clone",
-    image: Spotify_Clone,
   },
   {
-    title: "Ecommerce Website",
+    title: "Flora E-Commerce",
     description:
-      "A full-stack e-commerce app built with React and Node.js, featuring authentication, product listings, and a shopping cart.",
-    link: "https://github.com/riniagrawal252/flora",
+      "A full-stack e-commerce application developed with React, Node.js and MongoDB featuring authentication, shopping cart and product management.",
     image: Ecommerce,
+    link: "https://github.com/riniagrawal252/flora",
   },
 ];
 
-const portfolioData = [
-  {
-    id: "home",
-    content: (
-      <div className="text-container">
-        <h1 className="text-effect">
-          Hey! It&apos;s <span className="highlight">Rini</span>. Welcome to my portfolio!!
-        </h1>
-      </div>
-    ),
-  },
-  {
-    id: "background",
-    title: "About Me",
-    content: (
-      <div className="about-container">
+const skills = {
+  languages: ["Java", "JavaScript", "HTML", "CSS"],
+  frameworks: ["React", "Node.js", "Spring Boot", "Tailwind CSS"],
+  database: ["MySQL"],
+  tools: ["Git", "GitHub", "VS Code"],
+};
+
+const Portfolio = () => {
+  return (
+    <main className="portfolio">
+
+      {/* Home */}
+
+      <section className="section paintable" id="home">
+        <div className="hero">
+<center>
+          <h1>
+            Hi, I'm <span className="highlight">Rini Agrawal</span>
+          </h1>
+
+          <h3>Graphic Designer</h3>
+</center>
+          <p>
+            Passionate about building modern web applications using React,
+            Figma graphics designing. I enjoy solving coding problems and learning
+            new technologies.
+          </p>
+
+          <AnimatedText text="React • Graphic Design • Figma • Node.js • MySQL • JavaScript • GitHub" />
+
+
+        </div>
+      </section>
+
+      {/* About */}
+      
+
+      <section className="section paintable" id="background">
+        
+      
+<div>
+        <h2 className="section-title">About Me</h2>
+
         <p className="about-text">
-          My name is Rini Agrawal. I completed my B.Tech in Computer Science and Engineering from SGSU. 
-          I’m passionate about web development and have experience with React, Node.js, and JavaScript. 
-          I enjoy learning new technologies and improving my skills.
+          I recently completed my B.Tech in Computer Science and Engineering
+          from RGPV. I enjoy designing responsive web
+          applications and continuously improving my programming skills through
+          projects, coding challenges and internships by using React, Node.js, MySQL and other modern technologies. I am passionate about creating user-friendly interfaces and delivering high-quality graphics.
         </p>
-      </div>
-    ),
-  },
-  {
-    id: "projects",
-    title: "Projects",
-    content: (
-      <div className="project-cards">
-        {projects.map((proj) => (
-          <ProjectCard key={proj.title} {...proj} />
-        ))}
-      </div>
-    ),
-  },
-  {
-    id: "coreinfo",
-    title: "Skills",
-    content: (
-      <ul className="skills-list">
-        <li>
-          <span className="skill-label">Programming:</span> Java, JavaScript, HTML, CSS
-        </li>
-        <li>
-          <span className="skill-label">Frameworks:</span> Tailwind CSS, React, Node.js, SpringBoot
-        </li>
-        <li>
-          <span className="skill-label">Databases:</span> MySQL
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: "experience",
-    title: "Experience",
-    content: <p className="experience-text">Pursuing Internship at SGSU.</p>,
-  },
-  {
-    id: "extras",
-    title: "Extras",
-    content: (
-      <>
-        <ul className="extras-list">
+     </div>   
+        
+
+      </section>
+
+      {/* Projects */}
+
+      <section className="section paintable" id="projects">
+
+        <h2 className="section-title">Projects</h2>
+
+        <div className="project-cards">
+
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+            />
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* Skills */}
+
+      <section className="section paintable" id="skills">
+
+        <h2 className="section-title">Skills</h2>
+
+        <div className="skills-grid">
+
+          <div className="skill-card">
+            <h3>Languages</h3>
+            <p>{skills.languages.join(", ")}</p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Frameworks</h3>
+            <p>{skills.frameworks.join(", ")}</p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Database</h3>
+            <p>{skills.database.join(", ")}</p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Tools</h3>
+            <p>{skills.tools.join(", ")}</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Experience */}
+
+      
+
+      
+          
+
+      
+      <section className="section paintable" id="coreinfo">
+    
+       <h2 className="skills-list">Core Information </h2> <span className="skill-label">10th Class:</span>
+       CBSE Board, 2017, 6.4 CGPA
+       <li> <span className="skill-label">12th Class:</span> </li><li>MP open state Board, 2019 4.2 CGPA </li>
+      <li> <span className="skill-label">Graduation:</span> B.Tech ,CSE RGPV</li>
+      <li> <span className="skill-label">Graduation Year:</span> 2024</li>
+      <li> <span className="skill-label">Graduation CGPA:</span> 8.14 CGPA</li>
+        
+</section>
+      {/* Contact */}
+         <section className="section paintable" id="extras">
+        <h2 className="section-title">Extras</h2>
+        <h6>Blogs:</h6>
+        <p>
+          My name is rini agrawal and I am a passionate web developer and designer. I have been working on various web development projects and have gained experience in front-end and back-end technologies. In my blog, I share my knowledge, experiences, and insights on web development, design, and related topics. I hope you find my blog posts informative and helpful. Thank you for visiting!
+        </p>
+        <h2 className="section-title">Achievements</h2>
+
+        
+
           <li>
-            <strong>Certifications:</strong> Java Full Stack Web Development at Cybrom Technology
+            Internship in Cybrom Technology
+          </li>
+
+          <li>
+            Participated in University Hackathons
+          </li>
+
+          <li>
+            Figma Graphics Designing
           </li>
           <li>
-            <strong>Open Source Contributions:</strong> Hackathon in SGSU
+            Poster Designing using Canva
           </li>
-          <li>
-            <strong>Hobbies:</strong> Reading books, making posters using canvas
-          </li>
-        </ul>
-        <span>
-          <AnimatedText text="JavaScript CSS HTML TailwindCSS ReactJS Java NodeJS GitHub VisualStudioCode" />
-        </span>
-      </>
-    ),
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    content: (
-      <address className="contact-section">
-        <p className="contact-text">You can reach me at:</p>
-        <ul className="contact-list">
-          <li>
-            Email:{" "}
-            <a href="mailto:riniagrawal678@gmail.com">riniagrawal678@gmail.com</a>
-          </li>
-          <li>
-            LinkedIn:{" "}
+
+         </section>
+
+<center>
+      <section className="section paintable" id="contact">
+
+        <h1 className="contact-text">Contact Me</h1>
+
+        <div className="contact-list">
+
+          <p>
+
+            <strong>Email:</strong>{" "}
+
+            <a href="mailto:riniagrawal678@gmail.com">
+              riniagrawal678@gmail.com
+            </a>
+
+          </p>
+
+          <p>
+
+            <strong>LinkedIn:</strong>{" "}
+
             <a
               href="https://www.linkedin.com/in/rini-agrawal-076619287"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn Profile
+              linkedin.com/in/rini-agrawal-076619287
             </a>
-          </li>
-          <li>
-            GitHub:{" "}
+
+          </p>
+
+          <p>
+
+            <strong>GitHub:</strong>{" "}
+
             <a
               href="https://github.com/riniagrawal252"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub Profile
+              github.com/riniagrawal252
             </a>
-          </li>
-        </ul>
-      </address>
-    ),
-  },
-];
 
-const Portfolio = () => {
-  return (
-<<<<<<< HEAD
-    <main className="portfolio">
-      {portfolioData.map(({ id, title, content }) => (
-        <section
-          key={id}
-          className="paintable section"
-          id={id}
-          aria-label={title || id}
-        >
-          {title && <h2 className="section-title">{title}</h2>}
-          {content}
-        </section>
-      ))}
-    </main>
-=======
-    <>
-    <div className="portfolio">
-     
-      <div className="section">
-      <section className="paintable" id="home">
-      <div className="text">
-        {/* Home Section */}
-        
-          <div className="text-container">
-            <h1 className="text-effect">
-              Hey! It's <span className="highlight">Rini</span>. Welcome to my portfolio!! I am here to showcase my skills and projects. Please feel free to explore and reach out if you have any questions or opportunities.
-            </h1>
-          </div>
-       
-      </div>
+          </p>
+
+        </div>
+                 <AnimatedText text="React • Graphic Design • Figma • Node.js • MySQL • JavaScript • GitHub" />
+
+
+
+
       </section>
-         <AnimatedText/>
-      </div>
-      
-      {/* About Me Section */}
-      <div className="section">
+      </center>
 
-      <div className="about-me-section">
-        <section className="paintable" id="background">
-          <div className="about-container">
-            <h2 className="section-title">About Me</h2>
-            <p className="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra nisi at semper malesuada. Proin vehicula libero non purus fringilla, id vulputate purus luctus. Nam nec justo nisi. Suspendisse potenti.
-            </p>
-          </div>
-          
-        </section>
-        <AnimatedText/>
-      </div>
-      </div>
-
-      {/* Projects Section */}
-      <div className="section">
-
-      <div className="projects-section">
-        <section className="paintable" id="projects">
-          <div className="project-container">
-            <h2 className="section-title">Projects</h2>
-            <div className="project-cards">
-              <ProjectCard
-                title="Spotify Clone"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada facilisis arcu."
-                link="https://github.com/yourusername/spotify-clone"
-                image={Spotify_Clone}
-              />
-              <ProjectCard
-                title="Ecommerce Website"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt metus et venenatis."
-                link="https://yourusername.netlify.app"
-                image={Ecommerce}
-              />
-            </div>
-          </div>
-          <AnimatedText/>
-        </section>
-      </div>
-      </div>
-
-      {/* Skills Section */}
-      <div className="section">
-
-      <div className="skills-section">
-        <section className="paintable" id="coreinfo">
-          <div className="skills-container">
-            <h2 className="section-title">Skills</h2>
-            <ul className="skills-list">
-              <li>
-                <span className="skill-label">Programming:</span> Javascript, Java, HTML, CSS
-              </li>
-              <li>
-                <span className="skill-label">Frameworks:</span> Tailwind CSS, React Js, Spring boot
-              </li>
-              <li>
-                <span className="skill-label">Databases:</span> Sql
-              </li>
-            </ul>
-          </div>
-          
-        </section>
-        <AnimatedText/>
-      </div>
-      </div>
-
-      {/* Experience Section */}
-      <div className="section">
-
-      <div className="experience-section">
-        <section className="paintable" id="experience">
-          <div className="experiences-container">
-            <h2 className="section-title">Experience</h2>
-            <p className="experience-text">
-             Internship At Scope Global Skills University.
-            </p>
-          </div>
-         
-        </section>
-         <AnimatedText/>
-      </div>
-</div>
-      {/* Extras Section */}
-      <div className="section">
-
-      <div className="extras-section">
-        <section className="paintable" id="extras">
-          <div className="extras-container">
-            <h2 className="section-title">Extras</h2>
-            <ul className="extras-list">
-              <li><strong>Certifications:</strong> Java Full Stack Development at Cybrom Technology</li>
-              <li><strong>Open Source Contributions:</strong> Played Cricket and earn Rs 5000 At cybrom technology</li>
-              <li><strong>Hobbies:</strong> Reading books, making blogs, making posters using canvas</li>
-            </ul>
-          </div>
-          
-        </section>
-         <AnimatedText/>
-      </div>
-      
-      </div>
-      
-    
-      
-
-     
-
-      {/* Contact Section */}
-      <div className="section">
-
-      <div className="contact-section">
-        <section className="paintable" id="contact">
-          <div className="contact-container">
-            <h2 className="section-title">Contact</h2>
-            <p className="contact-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-            </p>
-            <ul className="contact-list">
-              <li>Email: riniagrawal678@gmail.com</li>
-              <li>
-                LinkedIn:{" "}
-                <a href="www.linkedin.com/in/rini-agrawal-076619287" target="_blank" rel="noopener noreferrer">
-                  Placeholder LinkedIn Profile
-                </a>
-              </li>
-              <li>
-                GitHub:{" "}
-                <a href="https://github.com/riniagrawal252/" target="_blank" rel="noopener noreferrer">
-                  Placeholder GitHub Profile
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-         <AnimatedText/>
-      </div>
-      </div>
-      </div>
-    </>
->>>>>>> d2872ed9148da927a9dc44f718ce503e2ee20e8c
+    </main>
   );
 };
 

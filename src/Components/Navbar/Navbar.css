@@ -4,10 +4,10 @@
 .navbar {
   position: absolute;
   width: 100%;
-  padding: 10px 20px;
+
   display: flex;/* Add background if needed */
   z-index: 1000;
-    
+  
 
 }
 
@@ -15,7 +15,7 @@
    Lottie Container
 =========================== */
 .lottie {
-  position: relative;
+  
   width: 100%;
   max-width: 200px;
   height: auto;
@@ -40,7 +40,7 @@
   padding: 100px;
    transform: rotate(-90deg) ;
     font-weight: bold;
-    font:1.5em sans-serif;
+    font:1em sans-serif;
    
   
  
@@ -57,7 +57,7 @@
  color: #0c0547;
    transform: rotate(-90deg) ;
     font-weight: bold;
-    font :1.5em sans-serif;
+    font :1em sans-serif;
 }
 .circle-text-layer2:hover{
   color:  #440620;
@@ -92,17 +92,10 @@
 ============================ */
 .dropdown-content {
   position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: transparent;
   
-
-  padding: 10px;
-  z-index: 10;
-  width: 180px;
-  visibility: hidden; /* Prevent layout shifts */
-  opacity: 0;
+  transform: translateX(50%);
+  background-color: tranparent;
+color:pink;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
@@ -115,23 +108,8 @@
 /* =========================
    Dropdown Options (Buttons)
 ============================ */
-.dropdown-content button {
-  display: block;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 8px 12px;
-  font-size: 1rem;
-  color: #3d2121;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
 
-.dropdown-content button:hover {
-  background-color: #ee0f0f;
-}
+
 
 /* =========================
    Responsive Design

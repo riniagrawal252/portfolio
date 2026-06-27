@@ -4,11 +4,25 @@ import LottieAnimation from "../lottie/Lottie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
+const blogs = [
+  {
+    id: 1,
+    title: "Blog Post 1",
+    content:"My code, my life, my time, my work!!"
+    
+  },
+  {
+    id: 2,
+    title: "Blog Post 2",
+    content: "Hello, This is my work!!",
+  }
+  
+];
+
 const Navbar = () => {
   const parallaxRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle dropdown open/close
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
   // Close dropdown when clicking outside
@@ -22,38 +36,48 @@ const Navbar = () => {
         setIsOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Close dropdown on Esc
+  // Close on ESC
   useEffect(() => {
     const handleEsc = (event) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
     };
+
     document.addEventListener("keydown", handleEsc);
+
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  // Parallax scroll effect
+  // Parallax Effect
   useEffect(() => {
     const parallax = parallaxRef.current;
     if (!parallax) return;
 
     const layers = parallax.querySelectorAll(".layer");
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
+
       layers.forEach((layer, index) => {
         const speed = index + 1;
         layer.style.transform = `translateY(${scrollY / speed}px)`;
       });
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    
     <nav
       ref={parallaxRef}
       className="navbar"
@@ -62,56 +86,49 @@ const Navbar = () => {
     >
       <div className="lottie layer">
         <LottieAnimation />
+
         <div className="spacer" aria-hidden="true" />
 
-        {/* Circle with Dropdown */}
-        <div className="circle" role="region" aria-label="Language selection">
-          <span>En</span>
+        {/* Blog Dropdown */}
+        <div className="circle" role="region" aria-label="Blog Menu">
+          <span>Blogs</span>
+
           <button
-            onClick={toggleDropdown}
             className="dropdown-toggle"
+            onClick={toggleDropdown}
+            type="button"
             aria-haspopup="true"
             aria-expanded={isOpen}
-            aria-controls="language-dropdown"
-            type="button"
           >
             <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} />
           </button>
 
-          {/* Dropdown Content */}
-          <div
-            id="language-dropdown"
-            className={`dropdown-content ${isOpen ? "open" : ""}`}
-            role="menu"
-            aria-hidden={!isOpen}
-          >
-            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
-              Blog 1
-            </button>
-            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
-              Blog 2
-            </button>
-            <button role="menuitem" tabIndex={isOpen ? 0 : -1}>
-              Blog 3
-            </button>
-          </div>
+          {isOpen && (
+            <div
+              id="language-dropdown"
+              className="dropdown-content open"
+              role="menu"
+            >
+              {blogs.map((blog) => (
+                <div key={blog.id} className="blog-item">
+                  <h4>{blog.title}</h4>
+                  <p>{blog.content}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-         
 
         {/* Rotated Labels */}
-      
         <div className="circle-text-layer">
           My Portfolio is Here!!!
         </div>
-    
+
         <div className="circle-text-layer2">
-      Rini Agrawal
+          Rini Agrawal
         </div>
-        
       </div>
-     
     </nav>
-    
   );
 };
 
