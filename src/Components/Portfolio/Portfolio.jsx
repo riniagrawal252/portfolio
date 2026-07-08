@@ -12,7 +12,7 @@ const projects = [
     description:
       "A responsive Spotify clone built using HTML, CSS and JavaScript. Users can browse playlists and control music playback through an interactive interface.",
     image: SpotifyClone,
-    link: "https://github.com/riniagrawal252/Spotifyclone",
+    link: " https://riniagrawal252.github.io/Spotifyclone/",
   },
   {
     title: "Flora E-Commerce",
