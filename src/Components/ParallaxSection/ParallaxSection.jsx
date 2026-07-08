@@ -7,6 +7,7 @@ const Mainnavbar = ({
     { id: "background", label: "Background" },
     { id: "projects", label: "Projects" },
     { id: "coreinfo", label: "Core Info" },
+    {id: "skills", label: "Skills" },
     { id: "extras", label: "Extras" },
     { id: "contact", label: "Contact" },
   ],

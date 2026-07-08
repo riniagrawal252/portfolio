@@ -17,15 +17,23 @@ const projects = [
   {
     title: "Flora E-Commerce",
     description:
-      "A full-stack e-commerce application developed with React, Node.js and MongoDB featuring authentication, shopping cart and product management.",
+      "A graphic designer e-commerce application developed with React, Node.js and MongoDB featuring authentication, shopping cart and product management.",
     image: Ecommerce,
     link: "https://github.com/riniagrawal252/flora",
+    
   },
+  {
+    title: "My designs",
+    description:
+      "A collection of my graphic design projects created using Figma and Canva, showcasing my skills in creating visually appealing designs for various purposes.",
+    image: Ecommerce,
+    link: "https://github.com/riniagrawal252/My-design",
+  }
 ];
 
 const skills = {
-  languages: ["Java", "JavaScript", "HTML", "CSS"],
-  frameworks: ["React", "Node.js", "Spring Boot", "Tailwind CSS"],
+  languages: [ "JavaScript", "HTML", "CSS"],
+  frameworks: ["React","Canvas","Figma"],
   database: ["MySQL"],
   tools: ["Git", "GitHub", "VS Code"],
 };
@@ -37,25 +45,22 @@ const Portfolio = () => {
       {/* Home */}
 
       <section className="section paintable" id="home">
-        <div className="hero">
-<center>
-          <h1>
-            Hi, I'm <span className="highlight">Rini Agrawal</span>
-          </h1>
 
-          <h3>Graphic Designer</h3>
-</center>
-          <p>
-            Passionate about building modern web applications using React,
-            Figma graphics designing. I enjoy solving coding problems and learning
-            new technologies.
-          </p>
+  <div className="objective-box">
 
-          <AnimatedText text="React • Graphic Design • Figma • Node.js • MySQL • JavaScript • GitHub" />
+    <h2 className="section-title">Career Objective</h2>
 
+    <p>
+      To begin my career as a Graphic Designer and Frontend Developer in a
+      growth-oriented organization where I can apply my creativity,
+      technical knowledge, and problem-solving skills. I aim to contribute
+      to innovative projects while continuously learning modern design and
+      web technologies to grow as a professional.
+    </p>
 
-        </div>
-      </section>
+  </div>
+
+</section>
 
       {/* About */}
       
@@ -63,8 +68,9 @@ const Portfolio = () => {
       <section className="section paintable" id="background">
         
       
-<div>
+<div className="about-content">
         <h2 className="section-title">About Me</h2>
+        
 
         <p className="about-text">
           I recently completed my B.Tech in Computer Science and Engineering
@@ -72,6 +78,7 @@ const Portfolio = () => {
           applications and continuously improving my programming skills through
           projects, coding challenges and internships by using React, Node.js, MySQL and other modern technologies. I am passionate about creating user-friendly interfaces and delivering high-quality graphics.
         </p>
+        
      </div>   
         
 
@@ -101,35 +108,38 @@ const Portfolio = () => {
 
       {/* Skills */}
 
-      <section className="section paintable" id="skills">
+      {/* Skills */}
 
-        <h2 className="section-title">Skills</h2>
+<section className="section paintable" id="skills">
 
-        <div className="skills-grid">
+  <h2 className="section-title">Skills</h2>
 
-          <div className="skill-card">
-            <h3>Languages</h3>
-            <p>{skills.languages.join(", ")}</p>
-          </div>
+  <div className="skills-grid">
 
-          <div className="skill-card">
-            <h3>Frameworks</h3>
-            <p>{skills.frameworks.join(", ")}</p>
-          </div>
+    <div className="skill-card">
+      <h3>💻 Languages</h3>
+      <p>{skills.languages.join(", ")}</p>
+    </div>
 
-          <div className="skill-card">
-            <h3>Database</h3>
-            <p>{skills.database.join(", ")}</p>
-          </div>
+    <div className="skill-card">
+      <h3>⚛️ Frameworks</h3>
+      <p>{skills.frameworks.join(", ")}</p>
+    </div>
 
-          <div className="skill-card">
-            <h3>Tools</h3>
-            <p>{skills.tools.join(", ")}</p>
-          </div>
+    <div className="skill-card">
+      <h3>🗄️ Database</h3>
+      <p>{skills.database.join(", ")}</p>
+    </div>
 
-        </div>
+    <div className="skill-card">
+      <h3>🛠️ Tools</h3>
+      <p>{skills.tools.join(", ")}</p>
+    </div>
 
-      </section>
+  </div>
+
+</section>
+      
 
       {/* Experience */}
 
@@ -139,43 +149,60 @@ const Portfolio = () => {
           
 
       
-      <section className="section paintable" id="coreinfo">
-    
-       <h2 className="skills-list">Core Information </h2> <span className="skill-label">10th Class:</span>
-       CBSE Board, 2017, 6.4 CGPA
-       <li> <span className="skill-label">12th Class:</span> </li><li>MP open state Board, 2019 4.2 CGPA </li>
-      <li> <span className="skill-label">Graduation:</span> B.Tech ,CSE RGPV</li>
-      <li> <span className="skill-label">Graduation Year:</span> 2024</li>
-      <li> <span className="skill-label">Graduation CGPA:</span> 8.14 CGPA</li>
-        
+     <section className="section paintable" id="coreinfo">
+
+<div className="content-box">
+
+<h2 className="section-title">
+Core Information
+</h2>
+
+<ul>
+
+<li><strong>10th:</strong> CBSE Board (2017) - 6.4 CGPA</li>
+
+<li><strong>12th:</strong> MP Open Board (2019) - 4.2 CGPA</li>
+
+<li><strong>B.Tech:</strong> Computer Science & Engineering</li>
+
+<li><strong>University:</strong> RGPV</li>
+
+<li><strong>Graduation:</strong> 2024</li>
+
+<li><strong>CGPA:</strong> 8.14</li>
+
+</ul>
+
+</div>
+
 </section>
       {/* Contact */}
-         <section className="section paintable" id="extras">
-        <h2 className="section-title">Extras</h2>
-        <h6>Blogs:</h6>
-        <p>
-          My name is rini agrawal and I am a passionate web developer and designer. I have been working on various web development projects and have gained experience in front-end and back-end technologies. In my blog, I share my knowledge, experiences, and insights on web development, design, and related topics. I hope you find my blog posts informative and helpful. Thank you for visiting!
-        </p>
-        <h2 className="section-title">Achievements</h2>
+        <section className="section paintable" id="extras">
 
-        
+  <div className="extras-box">
 
-          <li>
-            Internship in Cybrom Technology
-          </li>
+    <h2 className="section-title">Extras</h2>
 
-          <li>
-            Participated in University Hackathons
-          </li>
+    <h3>Blogs</h3>
 
-          <li>
-            Figma Graphics Designing
-          </li>
-          <li>
-            Poster Designing using Canva
-          </li>
+    <p>
+      I enjoy writing about React, Graphic Design, UI/UX, and modern web
+      development. I share my learning experience, project ideas, and tips
+      that help beginners improve their skills.
+    </p>
 
-         </section>
+    <h3>Achievements</h3>
+
+    <ul>
+      <li>🏆 TCS iON Certification</li>
+      <li>🎨 Graphic Design Portfolio</li>
+      <li>💻 React Portfolio Website</li>
+      <li>🚀 Completed Multiple Frontend Projects</li>
+    </ul>
+
+  </div>
+
+</section>
 
 <center>
       <section className="section paintable" id="contact">
