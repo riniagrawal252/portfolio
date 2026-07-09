@@ -32,12 +32,7 @@ const projects = [
   }
 ];
 
-const skills = {
-  languages: [ "JavaScript", "HTML", "CSS"],
-  frameworks: ["React","Canvas","Figma"],
-  database: ["MySQL"],
-  tools: ["Git", "GitHub", "VS Code"],
-};
+
 
 const Portfolio = () => {
   return (
@@ -107,39 +102,9 @@ const Portfolio = () => {
 
       </section>
 
-      {/* Skills */}
+    
 
-      {/* Skills */}
 
-<section className="section paintable" id="skills">
-
-  <h2 className="section-title">Skills</h2>
-
-  <div className="skills-grid">
-
-    <div className="skill-card">
-      <h3>💻 Languages</h3>
-      <p>{skills.languages.join(", ")}</p>
-    </div>
-
-    <div className="skill-card">
-      <h3>⚛️ Frameworks</h3>
-      <p>{skills.frameworks.join(", ")}</p>
-    </div>
-
-    <div className="skill-card">
-      <h3>🗄️ Database</h3>
-      <p>{skills.database.join(", ")}</p>
-    </div>
-
-    <div className="skill-card">
-      <h3>🛠️ Tools</h3>
-      <p>{skills.tools.join(", ")}</p>
-    </div>
-
-  </div>
-
-</section>
       
 
       {/* Experience */}
@@ -162,7 +127,7 @@ Core Information
 
 <li><strong>10th:</strong> CBSE Board (2017) - 6.4 CGPA</li>
 
-<li><strong>12th:</strong> MP Open Board (2019) - 4.2 CGPA</li>
+<li><strong>12th:</strong> MP Open Board (2019) -248/500 MARKS</li>
 
 <li><strong>B.Tech:</strong> Computer Science & Engineering</li>
 
