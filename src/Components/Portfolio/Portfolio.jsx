@@ -5,6 +5,7 @@ import AnimatedText from "../Animated/Animated";
 
 import SpotifyClone from "../assets/Spotify-Clone.png";
 import Ecommerce from "../assets/Ecommerce.png";
+import design from "../assets/design.png";
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
     title: "My designs",
     description:
       "A collection of my graphic design projects created using Figma and Canva, showcasing my skills in creating visually appealing designs for various purposes.",
-    image: Ecommerce,
+    image: design,
     link: "https://github.com/riniagrawal252/My-design",
   }
 ];
