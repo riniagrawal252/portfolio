@@ -206,7 +206,7 @@ Core Information
           </p>
 
         </div>
-                 <AnimatedText text="React • Graphic Design • Figma • Node.js • MySQL • JavaScript • GitHub" />
+                 <AnimatedText text="HR • Recruiter • Executive • Manager • Talent • Acquisition • Hiring • Sourcing" />
 
 
 
