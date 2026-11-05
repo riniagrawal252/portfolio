@@ -47,11 +47,7 @@ const Portfolio = () => {
     <h2 className="section-title">Career Objective</h2>
 
     <p>
-      To begin my career as a Graphic Designer and Frontend Developer in a
-      growth-oriented organization where I can apply my creativity,
-      technical knowledge, and problem-solving skills. I aim to contribute
-      to innovative projects while continuously learning modern design and
-      web technologies to grow as a professional.
+      To begin my career as a Hr Recruiter in Vision India.
     </p>
 
   </div>
@@ -70,9 +66,7 @@ const Portfolio = () => {
 
         <p className="about-text">
           I recently completed my B.Tech in Computer Science and Engineering
-          from RGPV. I enjoy designing responsive web
-          applications and continuously improving my programming skills through
-          projects, coding challenges and internships by using React, Node.js, MySQL and other modern technologies. I am passionate about creating user-friendly interfaces and delivering high-quality graphics.
+          from RGPV. I am passionate about interacting with people and solving their problems.
         </p>
         
      </div>   
@@ -152,18 +146,14 @@ Core Information
     <h3>Blogs</h3>
 
     <p>
-      I enjoy writing about React, Graphic Design, UI/UX, and modern web
-      development. I share my learning experience, project ideas, and tips
-      that help beginners improve their skills.
+     I enjoy writing blogs and improve my skills.
     </p>
 
     <h3>Achievements</h3>
 
     <ul>
       <li>🏆 TCS iON Certification</li>
-      <li>🎨 Graphic Design Portfolio</li>
-      <li>💻 React Portfolio Website</li>
-      <li>🚀 Completed Multiple Frontend Projects</li>
+     <li>Niyukti Shakti Programme</li>
     </ul>
 
   </div>
